@@ -1,0 +1,18 @@
+{
+  "name": "com.simulanis.contentsdk",
+  "version": "1.0.0",
+  "displayName": "Simulanis Content SDK",
+  "description": "Simulanis Content SDK",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+ "keywords": [
+    "simulanis",
+    "content",
+    "sdk"
+  ],
+  "author": {
+    "name": "Simulanis",
+    "email": "developer@simulanis.com",
+    "url": "https://www.simulanis.com"
+  }
+}
