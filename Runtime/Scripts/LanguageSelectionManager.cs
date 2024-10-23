@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Simulanis.ContentSDK
 {
     public class LanguageSelectionManager
     {
-        private string _currentLanguage = "English";
+        private static string _currentLanguage = "English";
 
         // Property to get and set the current language
-        public string CurrentLanguage
+        public static string CurrentLanguage
         {
             get { return _currentLanguage; }
             set 
