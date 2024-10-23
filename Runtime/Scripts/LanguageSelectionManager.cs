@@ -6,7 +6,7 @@ namespace Simulanis.ContentSDK
 {
     public class LanguageSelectionManager
     {
-        private string _currentLanguage;
+        private string _currentLanguage = "English";
 
         // Property to get and set the current language
         public string CurrentLanguage
