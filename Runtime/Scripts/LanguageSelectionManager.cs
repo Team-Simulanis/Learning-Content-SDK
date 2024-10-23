@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Simulanis.ContentSDK
 {
-    public class LanguageSelectionManager : MonoBehaviour
+    public class LanguageSelectionManager
     {
         private string _currentLanguage;
 
