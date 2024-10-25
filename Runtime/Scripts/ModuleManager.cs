@@ -16,10 +16,10 @@ namespace Simulanis.ContentSDK
             
         }
         /// <summary>
-        /// Stops the specified task.
+        /// Ends the specified task.
         /// </summary>
         /// <param name="taskID">ID of the task to stop.</param>
-        public void StopTask(string taskID)
+        public void EndTask(string taskID)
         {
             
         }
