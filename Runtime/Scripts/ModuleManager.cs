@@ -7,6 +7,11 @@ namespace Simulanis.ContentSDK
     /// </summary>
     public class ModuleManager : MonoBehaviour
     {
+        public static ModuleManager Instance;
+        void Awake()
+        {
+            Instance = this;
+        }
         /// <summary>
         /// Starts the specified task.
         /// </summary>
@@ -30,6 +35,28 @@ namespace Simulanis.ContentSDK
         public void ButtonTask(string taskID)
         {
             
+        }
+        /// <summary>
+        /// Fetch assessment data from server
+        /// </summary>
+        /// <param name="appId">ID of the module, ref. "vault.simulanis.io"</param>
+        /// <returns></returns>
+        public string GetAssessment(string appId)
+        {
+            string result = string.Empty;
+            StartCoroutine(ServerManager.FetchDataCoroutine(
+                appId,
+                (response) => 
+                {
+                    Debug.Log("Fetch Successful: " + response);
+                    result = response;
+                },
+                (error) => 
+                {
+                    Debug.LogError("Fetch Error: " + error);
+                }
+            ));
+            return result;
         }
     }
 }
