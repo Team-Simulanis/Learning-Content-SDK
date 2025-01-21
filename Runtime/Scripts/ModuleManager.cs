@@ -68,7 +68,7 @@ namespace Simulanis.ContentSDK
         /// User response in string format
         /// </summary>
         /// <param name="userResponse"> user response</param>
-        void SendAssessment(string userResponse)
+        public void SendAssessment(string userResponse)
         {
 
         }
