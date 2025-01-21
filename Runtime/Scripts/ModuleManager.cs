@@ -39,9 +39,15 @@ namespace Simulanis.ContentSDK
         /// <summary>
         /// Fetch assessment data from server
         /// </summary>
+        /// <param name="appId"></param>
+        /// <param name="onSuccess"></param>
+        /// <param name="onError"></param> <summary>
+        /// 
+        /// </summary>
         /// <param name="appId">ID of the module, ref. "vault.simulanis.io"</param>
-        /// <returns></returns>
-        public string GetAssessment(string appId)
+        /// <param name="onSuccess">Get response in string</param>
+        /// <param name="onError">Get error response in string</param>
+        public void GetAssessment(string appId, System.Action<string> onSuccess, System.Action<string> onError)
         {
             string result = string.Empty;
             StartCoroutine(ServerManager.FetchDataCoroutine(
@@ -49,14 +55,22 @@ namespace Simulanis.ContentSDK
                 (response) => 
                 {
                     Debug.Log("Fetch Successful: " + response);
-                    result = response;
+                    onSuccess?.Invoke(response);
                 },
                 (error) => 
                 {
                     Debug.LogError("Fetch Error: " + error);
+                    onError?.Invoke(error);
                 }
             ));
-            return result;
+        }
+        /// <summary>
+        /// User response in string format
+        /// </summary>
+        /// <param name="userResponse"> user response</param>
+        void SendAssessment(string userResponse)
+        {
+
         }
     }
 }
