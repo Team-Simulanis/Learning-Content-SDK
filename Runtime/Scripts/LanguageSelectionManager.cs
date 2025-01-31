@@ -5,7 +5,7 @@ namespace Simulanis.ContentSDK
     /// </summary>
     public class LanguageSelectionManager
     {
-        private static string _currentLanguage = "English";
+        private static string _currentLanguage = null;
 
         /// <summary>
         /// Gets or sets the current language. Defaults to English.
@@ -15,7 +15,7 @@ namespace Simulanis.ContentSDK
             get { return _currentLanguage; }
             set 
             { 
-                _currentLanguage = value;//"English", "Hindi"   -  English is Default
+                _currentLanguage = value;//"English", "Hindi"   -  Null is Default
             }
         }
     }
